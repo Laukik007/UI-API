@@ -17,5 +17,22 @@
 .card-content {
   padding: 16px;
 }
-
+.card-2 {
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 210px; /* Set a minimum height for the card */
+  max-width:100%;
+  margin-top:1rem;
+  margin-bottom: 1rem;
+}
+.card-3 {
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 250px; /* Set a minimum height for the card */
+  max-width:100%;
+  margin-top:1rem;
+  margin-bottom: 1rem;
+}
 /* Rest of your styles... */

@@ -29,6 +29,7 @@ const CreatingQuestion: React.FC<CreatingQuestionProps> = ({
   status
 }) => {
   return (
+
     <div key={index}>
       {content.type && (
         <>
@@ -37,6 +38,7 @@ const CreatingQuestion: React.FC<CreatingQuestionProps> = ({
               switch (content.type) {
                 case "paragraph":
                   return <ParagraphQuestion
+                  SelectType={SelectType}
                   questionInput={questionInput}
                   setQuestionInput={setQuestionInput}
                   index={index}
@@ -50,6 +52,7 @@ const CreatingQuestion: React.FC<CreatingQuestionProps> = ({
                 case "mcq":
                   return (
                     <McqQuestion
+                     SelectType={SelectType}
                       content={content}
                       questionInput={questionInput}
                       setQuestionInput={setQuestionInput}
@@ -65,6 +68,7 @@ const CreatingQuestion: React.FC<CreatingQuestionProps> = ({
 
                 case "short answer":
                   return <ParagraphQuestion
+                  SelectType={SelectType}
                   questionInput={questionInput}
                   setQuestionInput={setQuestionInput}
                   index={index}
@@ -77,6 +81,7 @@ const CreatingQuestion: React.FC<CreatingQuestionProps> = ({
 
                 case "yes/no":
                   return <ParagraphQuestion
+                  SelectType={SelectType}
                   questionInput={questionInput}
                   setQuestionInput={setQuestionInput}
                   index={index}
@@ -89,6 +94,7 @@ const CreatingQuestion: React.FC<CreatingQuestionProps> = ({
                 
                 case "file_upload":
                   return <ParagraphQuestion
+                  SelectType={SelectType}
                   questionInput={questionInput}
                   setQuestionInput={setQuestionInput}
                   index={index}
@@ -101,6 +107,7 @@ const CreatingQuestion: React.FC<CreatingQuestionProps> = ({
 
                   case "dropdown":
                     return <McqQuestion
+                    SelectType={SelectType}
                     content={content}
                       questionInput={questionInput}
                       setQuestionInput={setQuestionInput}
@@ -115,6 +122,7 @@ const CreatingQuestion: React.FC<CreatingQuestionProps> = ({
 
                   case "video":
                     return <VideoQuestion
+                    SelectType={SelectType}
                     content={content}
                       questionInput={questionInput}
                       setQuestionInput={setQuestionInput}

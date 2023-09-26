@@ -4,6 +4,7 @@ import Card from './component/card/card';
 import PersonalInformationForm from './component/sections/personalInformation/personalInformation';
 import ProfileInfoForm from './component/sections/profile/profile';
 import AdditonalQuestion from './component/sections/additionalQuestion/additionalQuestion';
+import ImageUploader from './component/imageUploader/imageUploader';
 
 
 const App: React.FC = () => {
@@ -19,13 +20,16 @@ const App: React.FC = () => {
   };
   return (
     <div className="App">
-      <Card headerColor="#D0F7FA" heading='Personal Information'>
+      <Card headerColor="#D0F7FA" heading='Personal Information' type='personalInfoform'>
+      <ImageUploader/> {/* Use the ImageUploader component */}
+      </Card>
+      <Card headerColor="#D0F7FA" heading='Personal Information' type='personalInfoform'>
       <PersonalInformationForm  onFormSubmit={handleFormSubmit}/> {/* Use the ImageUploader component */}
       </Card>
-      <Card headerColor="#D0F7FA" heading='Profile'>
+      <Card headerColor="#D0F7FA" heading='Profile' type='profileInfoform'>
       <ProfileInfoForm  onFormSubmit={handleFormSubmit}/> {/* Use the ImageUploader component */}
       </Card>
-      <Card headerColor="#D0F7FA" heading='Additional Question'>
+      <Card headerColor="#D0F7FA" heading='Additional Question' type='additionalQuestion'>
       <AdditonalQuestion/> {/* Use the ImageUploader component */}
       </Card>
     </div>

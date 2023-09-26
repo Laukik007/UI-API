@@ -4,6 +4,7 @@ import CreatingQuestion from "../../statusBasedUi/create_edit";
 import SavedQuestion from "../../statusBasedUi/saved";  
 import { generateUUID } from "../../../utils/formUtils";
 import ProfileForm from "../../subcomponent/profileForm";
+import Card from "../../card/card";
 interface ProfileInfoFormProps {
   onFormSubmit: (formData: FormData) => void;
 }
@@ -108,20 +109,24 @@ const ProfileInfoForm: React.FC<ProfileInfoFormProps> = ({
             status="editing"
           />
             break;
-
-          case "saved":
-            uiElement = <SavedQuestion
-            setQuestionContent={setProfileQuestion}
-            questionContent={profileQuestion} 
-            content={content} 
-            key={index} 
-            index={index} 
-            />;
-            break;
-
-          default:
+            case "saved":
+                uiElement = (
+                //   <Card type='question' heading='Questions' headerColor="#D0F7FA">
+                    <SavedQuestion
+                      setQuestionContent={setProfileQuestion}
+                      questionContent={profileQuestion}
+                      content={content}
+                      key={index}
+                      index={index}
+                    />
+                //   </Card>
+                );
+                break;
+            
+            default:
             uiElement = null;
             break;
+              
         }
 
         return uiElement;

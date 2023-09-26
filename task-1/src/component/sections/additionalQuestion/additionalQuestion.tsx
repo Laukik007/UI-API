@@ -2,14 +2,11 @@ import React, { useState } from "react";
 import StatusNew from "../../statusBasedUi/new";
 import CreatingQuestion from "../../statusBasedUi/create_edit";
 import SavedQuestion from "../../statusBasedUi/saved";
-import PersonalInfoFormComponent from "../../subcomponent/personalForm";
 import { generateUUID } from "../../../utils/formUtils";
 interface AdditionalQuestionFormProps {
-  onFormSubmit: (formData: FormData) => void;
 }
 
 const AdditonalQuestion: React.FC<AdditionalQuestionFormProps> = ({
-  onFormSubmit,
 }) => {
   const [additionalQuestion, setAdditionalQuestion] = useState([] as any[]);
   const [newChoice, setNewChoice] = useState("");
@@ -58,9 +55,7 @@ const AdditonalQuestion: React.FC<AdditionalQuestionFormProps> = ({
 
   return (
     <>
-      <PersonalInfoFormComponent
-      onFormSubmit={onFormSubmit} 
-      />
+      
       {additionalQuestion.map((content, index) => {
         let uiElement;
 

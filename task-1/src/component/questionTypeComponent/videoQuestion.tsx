@@ -1,5 +1,6 @@
 // McqQuestion.tsx
 import React, { useEffect } from 'react';
+import Card from '../card/card';
 
 interface VidoQuestionProps {
     content: any; // Adjust the type as needed
@@ -12,6 +13,7 @@ interface VidoQuestionProps {
     questionContent: any[]; // Adjust the type as needed
     setQuestionContent: (content: any[]) => void;
     status:string
+    SelectType: (e: React.ChangeEvent<HTMLSelectElement>, selectedObjectId: string) => void;
 }
 
 
@@ -25,7 +27,8 @@ const VideoQuestion: React.FC<VidoQuestionProps> = ({
     questionContent,
     setQuestionContent,
     typeofQuestion,
-    status
+    status,
+    SelectType
 }) => {
 
   const handleDelete = () => {
@@ -38,18 +41,36 @@ const VideoQuestion: React.FC<VidoQuestionProps> = ({
   };
   
   return (
-    <>
-    <div>
-        <h3>Question</h3>
-        <input type='text' placeholder='Q:'/>
-        <textarea  rows={4} cols={30} placeholder='Type here'></textarea>
-        <input type='text' placeholder='max duration of video'/>
-        <select>
+    <Card type='question' heading='Question' headerColor="#D0F7FA">
+        <div key={index}>
+          <h3 style={{margin:0,marginBottom:"0.5rem"}}>Type</h3>
+          <select style={{ width: '31.5rem',height:"2rem"}}  onChange={(e) => SelectType(e, content.id)} value={content.type}>
+                <option value={content.type} disabled>
+                  {content.type}
+                </option>
+                <option>paragraph</option>
+                <option>mcq</option>
+                <option>short answer</option>
+                <option>yes/no</option>
+                <option>dropdown</option>
+                <option>file_upload</option>
+                <option>video</option>
+          </select>
+    </div>
+    <div style={{display: 'flex',flexDirection:"column"}}>
+        <h3 style={{margin: '0',marginTop: '1rem', marginBottom: '1rem'}}>Question</h3>
+        <input style={{marginBottom: '1rem', height: '1.5rem'}} type='text' placeholder='Q:'/>
+        <textarea style={{marginBottom: '1rem'}}  rows={4} cols={30} placeholder='Type here'></textarea>
+        <div style={{marginBottom: '1rem',display: 'flex',justifyContent: 'space-between'}}>
+        <input style={{width:"60%",height:"1.5rem"}}  type='text' placeholder='max duration of video'/>
+        <select style={{width:"30%",height:"2rem"}}>
             <option>minutes</option>
             <option>seconds</option>
         </select>
+        </div>
+       
     </div>
-      <div>
+      <div  style={{width: '30rem',display: 'flex',justifyContent: 'space-between',height: '2rem',marginTop:"1rem"}}>
         <button onClick={handleDelete}>delete</button>
         <button
           onClick={() => {
@@ -66,7 +87,7 @@ const VideoQuestion: React.FC<VidoQuestionProps> = ({
           save
         </button>
       </div>
-    </>
+    </Card>
   );
 };
 

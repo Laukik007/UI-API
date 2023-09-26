@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons"; // Import the edit icon
+import Card from "../card/card";
 
 interface SavedQuestionProps {
   index: number;
@@ -25,9 +26,14 @@ const SavedQuestion: React.FC<SavedQuestionProps> = ({ index, content, questionC
   }
   
   return (
-    <div key={index}>
-      <p>Type: {content.type}</p>
-      <p>Question: {content.question}</p>
+    
+    <div style={{marginBottom: '1rem',
+    display: 'flex',
+    width: '100%',
+    justifyContent: 'space-between',marginTop:"1rem"}} key={index}>
+      <div> <p style={{margin:"0", color:"#979797"}}>{content.type}</p>
+      <p style={{margin:"0"}}>{content.question}</p></div>
+     
       <button onClick={handleEdit}>
         <FontAwesomeIcon icon={faEdit} /> Edit 
       </button>

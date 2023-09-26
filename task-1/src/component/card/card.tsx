@@ -8,11 +8,13 @@ interface CardProps {
   children: ReactNode;
   headerColor?: string;
   heading:string
+  type:string
 }
 
-const Card: React.FC<CardProps> = ({ children, headerColor,heading }) => {
+const Card: React.FC<CardProps> = ({ children, headerColor,heading,type }) => {
+  const className = `card${type === 'select' ? '-2' : type === 'question' ? '-3' : ''}`;
   return (
-    <div className="card">
+    <div className={className}>
       <div className="card-header" style={{ backgroundColor: headerColor }}>
        <h2>{heading}</h2>
       </div>

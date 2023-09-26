@@ -103,9 +103,9 @@ const ProfileForm: React.FC<ProfileFormProps> = ({
   return (
     <form onSubmit={handleSubmit}>
     
-    <div className="form-group">
+    <div className="form1-group">
       <label>Education:</label>
-      <div className="education-group">
+      <div className="bool-group">
         <label>
           <input
             type="checkbox"
@@ -126,9 +126,9 @@ const ProfileForm: React.FC<ProfileFormProps> = ({
         </label>
       </div>
     </div>
-    <div className="form-group">
+    <div className="form1-group">
       <label>Experience:</label>
-      <div className="experience-group">
+      <div className="bool-group">
         <label>
           <input
             type="checkbox"
@@ -149,9 +149,9 @@ const ProfileForm: React.FC<ProfileFormProps> = ({
         </label>
       </div>
     </div>
-    <div className="form-group">
+    <div className="form1-group">
       <label>Resume:</label>
-      <div className="resume-group">
+      <div className="bool-group">
         <label>
           <input
             type="checkbox"

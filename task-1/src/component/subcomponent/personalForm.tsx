@@ -1,6 +1,6 @@
 // PersonalInfoFormComponent.tsx
 import React, { useState } from 'react';
-
+import './style.css'
 interface PersonalInfoFormComponentProps {
   onFormSubmit: (formData: FormData) => void;
 }
@@ -164,41 +164,20 @@ const PersonalInfoFormComponent: React.FC<PersonalInfoFormComponentProps> = ({
   return (
     <form onSubmit={handleSubmit}>
     <div className="form-group">
-      <label htmlFor="firstName">First Name:</label>
-      <input
-        type="text"
-        id="firstName"
-        name="firstName"
-        value={formData.firstName}
-        onChange={handleInputChange}
-        required
-      />
+      <p className='custom-p'>First Name</p>
+      <hr className='custom_hr'/>
     </div>
     <div className="form-group">
-      <label htmlFor="lastName">Last Name:</label>
-      <input
-        type="text"
-        id="lastName"
-        name="lastName"
-        value={formData.lastName}
-        onChange={handleInputChange}
-        required
-      />
+      <p className='custom-p'>Last Name</p>  
+      <hr className='custom_hr'/>
     </div>
     <div className="form-group">
-      <label htmlFor="email">Email:</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        value={formData.email}
-        onChange={handleInputChange}
-        required
-      />
+      <p className='custom-p'>Email</p>
+      <hr className='custom_hr'/>
     </div>
-    <div className="form-group">
+    <div className="form1-group">
       <label>Phone no:</label>
-      <div className="phone-group">
+      <div className="bool-group">
         <label>
           <input
             type="checkbox"
@@ -219,9 +198,9 @@ const PersonalInfoFormComponent: React.FC<PersonalInfoFormComponentProps> = ({
         </label>
       </div>
     </div>
-    <div className="form-group">
+    <div className="form1-group">
       <label>Nationality:</label>
-      <div className="nationality-group">
+      <div className="bool-group">
         <label>
           <input
             type="checkbox"
@@ -242,9 +221,9 @@ const PersonalInfoFormComponent: React.FC<PersonalInfoFormComponentProps> = ({
         </label>
       </div>
     </div>
-    <div className="form-group">
+    <div className="form1-group">
       <label>Current Residence:</label>
-      <div className="residence-group">
+      <div className="bool-group">
         <label>
           <input
             type="checkbox"
@@ -265,9 +244,9 @@ const PersonalInfoFormComponent: React.FC<PersonalInfoFormComponentProps> = ({
         </label>
       </div>
     </div>
-    <div className="form-group">
+    <div className="form1-group">
       <label>ID Number:</label>
-      <div className="id-group">
+      <div className="bool-group">
         <label>
           <input
             type="checkbox"
@@ -288,9 +267,9 @@ const PersonalInfoFormComponent: React.FC<PersonalInfoFormComponentProps> = ({
         </label>
       </div>
     </div>
-    <div className="form-group">
+    <div className="form1-group">
       <label>Date of Birth:</label>
-      <div className="dob-group">
+      <div className="bool-group">
         <label>
           <input
             type="checkbox"
@@ -311,9 +290,9 @@ const PersonalInfoFormComponent: React.FC<PersonalInfoFormComponentProps> = ({
         </label>
       </div>
     </div>
-    <div className="form-group">
+    <div className="form1-group">
       <label>Gender:</label>
-      <div className="gender-group">
+      <div className="bool-group">
         <label>
           <input
             type="checkbox"
