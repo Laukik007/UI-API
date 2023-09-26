@@ -1,0 +1,21 @@
+/* Card.css */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 250px; /* Set a minimum height for the card */
+  max-width:40%;
+}
+
+.card-header {
+  padding: 10px;
+  background-color: var(--header-color, #333);
+  color: black;
+  margin: 0;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+/* Rest of your styles... */
