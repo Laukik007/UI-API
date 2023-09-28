@@ -45,7 +45,7 @@ const ParagraphQuestion: React.FC<ParagraphQuestionProps> = ({
 			<div key={index}>
 				<h3 style={{ margin: 0, marginBottom: "0.5rem" }}>Type</h3>
 				<select
-					style={{ width: "25rem", height: "2rem" }}
+					style={{ width: "100%", height: "2rem" }}
 					onChange={(e) => SelectType(e, content.id)}
 					value={content.type}
 				>
@@ -68,12 +68,12 @@ const ParagraphQuestion: React.FC<ParagraphQuestionProps> = ({
 					placeholder="Type here"
 					defaultValue={inputValue}
 					onChange={(e) => setQuestionInput(e.target.value)}
-					style={{ width: "20.5rem", height: "1.5rem" }}
+					style={{ width: "100%", height: "1.5rem" }}
 				></input>
 			</div>
 			<div
 				style={{
-					width: "25rem",
+					width: "100%",
 					display: "flex",
 					justifyContent: "space-between",
 					height: "2rem",

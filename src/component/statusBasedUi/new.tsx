@@ -12,7 +12,7 @@ const StatusNew: React.FC<NewStatusProps> = ({ content, index, SelectType }) => 
     <Card headerColor="#D0F7FA" heading='Question' type="select">
          <div key={index}>
           <h3 style={{margin:0,marginBottom:"0.7rem"}}>Type</h3>
-          <select style={{ width: '25rem',height:"2rem"}}  onChange={(e) => SelectType(e, content.id)} value={content.type}>
+          <select style={{ width: '100%',height:"2rem"}}  onChange={(e) => SelectType(e, content.id)} value={content.type}>
                 <option value={content.type} disabled>
                   {content.type}
                 </option>
