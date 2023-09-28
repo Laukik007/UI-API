@@ -5,12 +5,7 @@
 	min-height: 250px;
 	max-width: 40%;
 }
-@media screen and(max-width: 700px) {
-	/* Apply styles when the screen width is 700px or less */
-	.card{
-		max-width: 100%;
-	}
-  }
+
 .card-header {
 	padding: 10px;
 	background-color: var(--header-color, #333);
@@ -38,4 +33,9 @@
 	max-width: 100%;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
+}
+@media screen and (max-width: 800px) {
+    .card {
+        max-width: 100%;
+    }
 }
