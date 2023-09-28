@@ -1,0 +1,36 @@
+.card {
+	border: 1px solid #ddd;
+	border-radius: 18px;
+	overflow: hidden;
+	min-height: 250px;
+	max-width: 40%;
+}
+
+.card-header {
+	padding: 10px;
+	background-color: var(--header-color, #333);
+	color: black;
+	margin: 0;
+}
+
+.card-content {
+	padding: 16px;
+}
+.card-2 {
+	border: 1px solid #ddd;
+	border-radius: 18px;
+	overflow: hidden;
+	min-height: 210px;
+	max-width: 100%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.card-3 {
+	border: 1px solid #ddd;
+	border-radius: 18px;
+	overflow: hidden;
+	min-height: 250px;
+	max-width: 100%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
